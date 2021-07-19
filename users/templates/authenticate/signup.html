@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block users %}
+<body>
+  <!-- main -->
+</br>
+</br>
+  <div class="main-w3layouts wrapper">
+    <h1>SignIn Now!</h1>
+    {% if messages %} 
+          {% for messages in messages %}
+    <div class="alert alert-success">
+  <strong> 
+            {{ messages }}
+         
+    </strong>
+</div>
+ {% endfor %}
+        {% endif %}
+<div class="main-agileinfo">
+      <div class="agileits-top">
+        <form action="signup_user" method=POST>
+
+          {% csrf_token %}
+          
+          <input class="text" type="text" name="username" placeholder="username" required="">
+          <input class="text email" type="email" name="email" placeholder="Email" required=""-->
+          <input class="text" type="password" name="password1" placeholder="Password" required=""-->
+          <input class="text w3lpass" type="password" name="password2" placeholder="Confirm Password" required="">
+          
+          <input type="submit">
+        </form>
+        <p>Having an Account? <a href="{% url 'signin' %}"> SignIn Now!</a></p>
+      </div>
+    </div>
+    <!-- copyright -->
+    <div class="colorlibcopy-agile">
+      <p>All rights reserved | Design by <a href="" target="_blank">Prakash M</a></p>
+    </div>
+    <!-- //copyright -->
+    <ul class="colorlib-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <!-- //main -->
+</body>
+
+{% endblock %}
